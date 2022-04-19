@@ -6,9 +6,9 @@ The website has both static and dynamic parts. Static part is built with html, c
 
 ## Static
 Home page of the website
-![image](https://user-images.githubusercontent.com/56120787/163990141-1318d4df-7651-4b8c-b427-f25da1b782fb.png)
-
+![image](https://user-images.githubusercontent.com/56120787/163991164-03663ef6-e976-483d-851c-0d7ff8d53fae.png)
 
 ## Dynamic 
 News page of the website
-![image](https://user-images.githubusercontent.com/56120787/163990796-14f63b9e-c948-41b0-a2b4-b4824f3796d6.png)
+![image](https://user-images.githubusercontent.com/56120787/163991043-530af2b3-5344-49b1-90d1-b863d12da94d.png)
+
