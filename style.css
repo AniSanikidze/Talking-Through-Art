@@ -1,0 +1,884 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+  
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+    /*navbar*/
+.logo {
+  width: 11rem;
+  padding: 0.3rem 0 0 0.4rem;
+}
+
+#hamburger {
+  width: 60px;
+  height: 45px;
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+#hamburger span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#hamburger span:nth-child(1) {
+  top: 0;
+}
+
+#hamburger span:nth-child(2),
+#hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+#hamburger span:nth-child(4) {
+  top: 36px;
+}
+
+#hamburger.open span:nth-child(1),
+ #hamburger.open span:nth-child(4){
+  width: 0%;
+  top: 18px;
+  left: 50%;
+}
+
+#hamburger.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+#hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 50;
+  background: rgba(0,0,0,0.9);
+  user-select: none;
+  display: none;
+}
+
+nav.show {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white;
+  margin-bottom: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #bbb;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.donate {
+  padding: 0 8rem 0 0;
+  right: 8.5rem;
+  width: 60px;
+  height: 55px;
+  position: absolute;
+  top: 0.4rem;
+  transform: scale(0.8);
+}
+
+.donate button{
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #1e1e1e ;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px 35px;
+  cursor: pointer;
+}
+
+.donate button:hover {
+  color:#DC143C;
+  box-shadow: 0px 4px 5px #DC143C;
+  border:#DC143C 2px solid ;   
+}  
+
+    /*HOME page*/
+header {
+  overflow: hidden;
+  position: relative; 
+}
+
+#backgroundimage {
+  background-image: url("images/media_index/homephoto.png");
+  height: 80vh; 
+  background-size: cover;
+}
+
+header h1 {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color:#fff;
+  text-transform: capitalize;
+  top: 50%;
+  right: 10%;
+} 
+
+#intro, #story, #branches{
+  text-align: center;
+  padding: 2% 2% 2% 2%;
+}
+
+#intro h2, #partners h2, #story h2, #main h2 , #branches h2, .caption {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5rem;
+}
+
+.parent img  {
+  width:7rem;
+  height: 7rem;
+}
+
+.parent h1 {
+  padding-top: 1.5rem;
+  color: red;
+  font-size: 3rem;
+}
+
+#intro .parent p{
+  padding: 1.5rem 3rem 0 3rem;
+}
+
+#partners {
+  text-align: center;
+  padding-top: 3%;  
+}
+
+#logos img {
+  margin: 0 5% 5% 5%;
+  width: 6rem;
+  height: 6rem;
+}
+
+#logos .usalvatora {
+  width: 12rem;
+}
+
+#logos .givingway {
+  width: 10rem;
+}
+
+    /*footer*/
+footer {
+  position: relative;
+  background-color: rgb(207, 203, 203);
+  color: black;
+}
+.social-menu ul {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 0;
+  display: flex;
+}
+.social-menu ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.social-menu ul li .fa {
+  color: #000000;
+  font-size: 25px;
+  line-height: 50px;
+  transition: .5s;
+}
+.social-menu ul li .fa:hover {
+  color: #ffffff;
+}
+.social-menu ul li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  transition: 0.5s;
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+  transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: #cd201f;
+}
+footer p {
+  padding: 20px 0 20px 40px;
+}
+footer .email {
+   color: red;
+}
+
+    /*About page*/ 
+
+#backgroundimage_about {
+  background-image: url("images/media_about/Art_therapy.jpg");
+  height: 80vh; 
+  background-size:cover;
+}
+.h1_about h1 {
+  right: 5%;   
+} 
+
+.history {
+  display: flex;
+  align-items: center;
+}
+.history .story_img{
+  width:45%;
+  height: 10%;
+}
+.history p {
+  padding-left: 8%;
+}
+#main {
+  padding: 2% 0 2% 0;
+  align-items: center;
+  text-align: center;
+}
+.item {
+  width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: 
+		inset 0 0 0 16px rgba(255,255,255,0.6),
+		0 1px 2px rgba(0,0,0,0.1);
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img-1 { 
+  background-image: url(images/media_about/petr.jpg);
+  background-size: 100% 100%;
+  
+}
+
+.img-2 { 
+  background-image: url(images/media_about/habi.jpg);
+  background-size: 100% 100%;
+}
+
+.img-3 { 
+  background-image: url(images/media_about/ndacya.jpg);
+  background-size: 100% 100%;
+}
+
+.img-4 { 
+  background-image: url(images/media_about/uwinge.jpg);
+  background-size: 100% 100%;
+}
+.img-5 { 
+  background-image: url(images/media_about/muha.jpg);
+  background-size: 100% 100%;
+}
+.img-6 { 
+  background-image: url(images/media_about/muka.jpg);
+  background-size: 100% 100%;
+}
+.img-7 { 
+  background-image: url(images/media_about/uwima.jpg);
+  background-size: 100% 100%;
+}
+
+.circles li {
+  width: 320px;
+  height: 320px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.circle-info {
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;	
+	transition: all 0.4s ease-in-out;
+  transform: scale(0);
+}
+
+.circle-info h3 {
+	color: #fff;
+	padding-top: 20px;
+	text-shadow: 
+		0 0 1px #fff, 
+    0 1px 2px rgba(0,0,0,0.3);
+    font-size: 16px;
+}
+
+.circle-info p {
+	color: #fff;
+	padding: 8px 22px;
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  transition: all 1s ease-in-out 0.4s;
+}
+
+.item:hover .circle-info p {
+	opacity: 1;
+}
+
+.item:hover {
+	box-shadow: 
+		inset 0 0 0 1px rgba(255,255,255,0.1),
+    0 1px 2px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.item:hover .circle-info {
+	transform: scale(1);
+}
+
+#branches img {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0 1rem 0;
+}
+
+    /*SERVICES page*/
+
+#backgroundimage_services {
+  background-image: url("images/media_services/Services.jpg");
+  height: 80vh; 
+  background-size: cover;
+}
+
+.p_services {
+  position: absolute;
+  top: 50%;
+  text-align: right;
+  color: #fff;
+  padding: 0 3% 0 60%;
+}
+
+.h1_services h1 {
+  top: 5%;
+  left: 2%;
+}
+
+.img-1-services {
+  background-image: url(images/media_services/english.jpg);
+  background-size: 100% 100%;
+}
+
+.img-2-services {
+  background-image: url(images/media_services/theraphy.jpg);
+  background-size: 100% 100%;
+}
+
+.img-3-services {
+  background-image: url(images/media_services/plan.jpg);
+  background-size: 100% 100%;
+}
+
+.img-4-services {
+  background-image: url(images/media_services/kids.jpg);
+  background-size: 100% 100%;
+}
+
+#main h4 {
+  padding: 5% 0 2% 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+#main .service{
+  padding: 15%;
+}
+
+#main .txt {
+padding: 30% 15%;
+}
+
+/*DESIGNS*/
+#backgroundimage_designs {
+  background-image: url("images/media_designs/Designs.jpg");
+  height: 80vh; 
+  background-size: cover;
+}
+
+#designs {
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+}
+
+#designs .gallery{
+  display: flex;
+  flex-direction: row;
+}
+
+#designs img {
+  padding-top: 2rem;
+  width:90%;
+}
+
+.desc h1 {
+  text-align: right;
+  padding: 0 3rem;
+  font-size: 18px;
+}
+
+.desc h2 {
+  font-size: 20px;
+}
+
+.desc h3 {
+  font-weight: 300;
+}
+
+    /*GET INVOLVED*/
+ 
+#backgroundimage_getinvolved {
+  background-image: url("images/media_getinvolved/getinvolved.jpg");
+  height: 80vh; 
+  background-size:cover;
+}
+
+#get_involved {
+  padding: 2rem 2rem 0 5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom:  4rem;
+}
+
+.wrapper img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  display: block;
+}
+
+#get_involved .content {
+  padding: 0 2% 0 15%;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.content p {
+  padding-bottom: 2rem;
+}
+
+.content button, .signup button{
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #1e1e1e ;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px 20px;
+  width: 10rem;
+  color: #000000;
+   cursor: pointer;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.container_getinvolved {
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.container_getinvolved  h1, button, .activity{
+  text-align: center;
+  align-items: center;
+}
+
+p.interest {
+  padding: 0;
+}
+
+#id01 h1{
+  padding-bottom: 4rem;
+}
+
+.container_getinvolved .add_info{
+  padding-bottom: 2rem;
+}
+
+.activity {
+  padding: 1rem;
+  display: flex;
+}
+
+.activity label {
+  padding: 0 2rem 0 0.5rem;
+}
+
+#get_involved .signup{
+  text-align: center;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width:1100px){
+  /*HOME*/
+  #logos img {
+    margin: 0 3% 5% 3%;
+  }
+}
+
+@media screen and (max-width:1000px){
+/*GET INVOLVED page*/
+.h1_get_involved h1 {
+  padding: 0;
+  right: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+ #get_involved .content {
+  padding: 1rem 0 0 0;
+  text-align: center;
+}
+
+}
+
+@media screen and (max-width:860px){
+
+html {
+  font-size: 15px;
+}
+    /*navbar*/
+.logo {
+  height: 4.5rem;
+}
+
+#hamburger {
+  transform: scale(0.6);
+}
+
+    /*footer*/
+.social-menu ul {
+  flex-direction: column;
+  right: 0;
+}
+
+.social-menu ul li {
+  margin: 2px 30px;
+}
+
+footer p {
+  padding: 20px 0 20px 20px;
+}
+    /*HOME page*/
+#intro h2, #partners h2, #story h2, #main h2, #branches h2, .caption {
+   font-size: 1.5rem;
+}
+
+.parent {
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.parent div {
+   padding-bottom: 2rem;
+}
+
+.parent img {
+   width: 6rem;
+   height: 6rem;
+}
+
+.parent h1 {
+  padding: 1rem 0 0 0;
+  font-size: 2rem;
+}
+
+#logos img {
+  margin: 0 10% 5% 10%;
+}
+
+#logos .usalvatora {
+  width: 10rem;
+  height: 5rem;
+}
+
+    /*ABOUT*/
+.h1_about, .h1_home, .h1_services, .h1_get_involved, .h1_designs {
+  text-align: center;
+} 
+
+.h1_about h1 {
+  right:10%;
+  left:10%;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+}
+
+.history .story_img {
+  width: 60%;
+}
+
+.history p {
+  padding-top: 3%;
+  padding-left: 0;
+} 
+
+    /*DESIGNS page*/
+.desc h1 {
+  font-size: 12px;
+  padding: 0 1.5rem 0.5rem;
+}
+
+.desc h2 {
+  font-size: 15px;
+}
+
+.desc h3 {
+  font-size: 13px;
+}
+
+    /*SERVICES page*/
+#main h4 {
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+    /*GET INVOLVED page*/
+.content h1 {
+  font-size: 1.5rem;
+}
+
+.h1_get_involved h1 {
+  padding: 0;
+  right: 0;
+}
+}
+
+@media screen and (max-width:750px){
+    /*navbar*/
+.logo {
+  width: 9rem;
+  padding: 0.2rem 0 0 0.3rem;
+  height: 3.5rem;
+}
+
+.donate {
+  right: 4.5rem;
+  height: 40px;
+  top: 0.2rem;
+  transform: scale(0.5);
+}
+
+#hamburger {
+  width: 45px;
+  height: 30px;
+  top: 0.7rem;
+  right: 0.5rem;
+  cursor: pointer;
+  transform: scale(0.6);
+}
+
+    /*HOME page*/
+header h1, .h1_about h1 {
+  font-size: 2rem;
+  right: 2%;
+}
+
+#logos .givingway,  #logos .usalvatora{
+  width: 9.1rem;
+}
+
+    /*GET INVOLVED page*/
+.h1_get_involved {
+  text-align: center;
+}
+
+.h1_get_involved h1 {
+  right: 10%;
+  top: 50%;
+}
+
+.container_getinvolved {
+  text-align: left;
+}
+
+.activity label {
+  padding: 0 0.5rem 0 0.5rem;
+}
+ 
+.activity {
+  padding: 1rem 0.2rem 1rem 0.2rem;
+}
+
+#get_involved {
+  padding: 2rem 2rem 0 2rem;
+} 
+}
+
+@media screen and (max-width:560px) {
+    /*ABOUT and SERVICES*/
+.circles li {
+  width: 300px;
+  height: 300px;
+  margin: 10px 0 80px 0; 
+ 
+}
+.circle-info p {
+  font-size: 13px;
+}  
+.p_services {
+  padding-left: 10%;
+}
+
+.desc h2 {
+  font-size: 12px;
+}
+.desc h3 {
+  font-size: 10px;
+}
+
+}
+
+@media screen and (max-width:400px) {
+    /*HOME*/
+#logos img{
+  height: 4rem;
+  width: 4rem;
+}  
+#logos .givingway, #logos .usalvatora{
+  width: 7rem;
+  height: 3.5rem;
+}
+    /*footer*/
+.social-menu ul li a {
+  width: 40px;
+  height: 40px;
+}
+.social-menu ul li .fa {
+  line-height: 40px;
+  font-size: 20px;
+}
+}
+
